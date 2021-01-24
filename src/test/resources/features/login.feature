@@ -21,7 +21,7 @@ Feature: Automation login functionality in Dojo application
     And login button should be disabled
 
     Examples:
-      | emailId          | password |errorMessage           |
+      | emailId          | password | errorMessage          |
       | test@example.com |          | Password required     |
 
 

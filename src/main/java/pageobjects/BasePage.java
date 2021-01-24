@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.DriverManager;
 import utilities.PropertyReader;
-import java.util.concurrent.TimeUnit;
 
 public class BasePage {
     public static WebDriver driver;
@@ -24,6 +23,19 @@ public class BasePage {
         WebDriverWait wait = new WebDriverWait(driver,2);
         wait.until(ExpectedConditions.presenceOfElementLocated(element));
     }
+
+    public static void clickElement(By locator)
+    {
+        waitForElement(locator);
+        driver.findElement(locator).click();
+    }
+
+    public static void enterText(By locator, String text)
+    {
+        waitForElement(locator);
+        driver.findElement(locator).sendKeys(text);
+    }
+
 
     //    closing browser after test execution
     @AfterClass

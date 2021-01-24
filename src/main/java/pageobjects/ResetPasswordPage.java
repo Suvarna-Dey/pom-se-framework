@@ -8,15 +8,20 @@ public class ResetPasswordPage extends BasePage{
     private static final By btn_reset = By.id("emailPasswordResetLinkBtn");
     private static By lbl_success_message=By.xpath("//p[contains(text(),'message')]");
 
-    public void enterEmail(String email) {
-        driver.findElement(input_emailId).click();
-        waitForElement(input_emailId);
-        driver.findElement(input_emailId).sendKeys(email);
+    public void clickEmail()
+    {
+        clickElement(input_emailId);
+    }
+
+    public void enterEmail(String email)
+    {
+        clickEmail();
+        enterText(input_emailId,email);
     }
 
     public void clickOnReset()
     {
-        driver.findElement(btn_reset).click();
+        clickElement(btn_reset);
     }
 
     public void verifySuccessMessageOnReset(String message)
@@ -25,4 +30,6 @@ public class ResetPasswordPage extends BasePage{
         waitForElement(lbl_success_message);
         Assert.assertEquals(message, driver.findElement(lbl_success_message).getAttribute("innerText"));
     }
+
+
 }

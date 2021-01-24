@@ -24,12 +24,22 @@ public class LoginStepDef extends ObjectManager {
 
     @When("^user enters \"([^\"]*)\" in \"([^\"]*)\" field$")
     public void user_enters_in_field(String value, String fieldName) {
-        loginPage.enterText(fieldName, value);
+        if(fieldName.equalsIgnoreCase("email")) {
+            loginPage.enterEmail(value);
+        }
+        else if(fieldName.equalsIgnoreCase("password")) {
+            loginPage.enterPassword(value);
+        }
     }
 
     @And("^user clicks on \"([^\"]*)\"$")
     public void userClicksOn(String fieldName){
-        loginPage.clickOnElement(fieldName);
+        if(fieldName.equalsIgnoreCase("password"))
+            loginPage.clickPassword();
+        else if(fieldName.equalsIgnoreCase("email"))
+            loginPage.clickEmail();
+        else if(fieldName.equalsIgnoreCase("forgot your password"))
+            loginPage.clickForgotPassword();
     }
 
     @Then("^user should be presented with \"([^\"]*)\" for \"([^\"]*)\"$")
