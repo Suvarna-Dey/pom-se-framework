@@ -1,7 +1,7 @@
-# Paymentsense Dojo App Login
+# Sample POM Framework
 
 ### Description:
-This project validates the login feature in Dojo App. 
+This is sample framework for web app automation using Se WebDriver
 
 ### Prerequisites:
 * Java
@@ -17,9 +17,4 @@ Tests can be run using the below command
 ```bash
 mvn clean test
 ```
-
-### Reports: 
-* JUnit reports generated in - `target/surefire-reports`
-* Cucumber reports generated in - `target/cucumber-report/com.dojo-login.Test/index.html`
-
 
