@@ -71,18 +71,13 @@
             <version>2.4.0</version>
         </dependency>
         <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>gherkin</artifactId>
-            <version>5.1.0</version>
-        </dependency>
-        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
-    <groupId>org.paymentsense</groupId>
-    <artifactId>dojologin</artifactId>
+    <groupId>org.page.object.model</groupId>
+    <artifactId>web-automation</artifactId>
     <version>1.0.0</version>
 </project>
