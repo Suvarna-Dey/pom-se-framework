@@ -8,10 +8,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = { "src/test/resources/features" },
         glue = {"stepdefinition" },
-        plugin = {"pretty", "html:target/reports",
-                "junit:target/reports/sample-framework.xml",
-                "json:target/reports/sample-framework.json"},
-        monochrome = true)
+        plugin = {"pretty", "html:target/cucumber-report/com.dojo-login.Test",
+                "junit:target/cucumber-report/com.dojo-login.cucumber.xml"})
 public class TestRunner {
 
 
